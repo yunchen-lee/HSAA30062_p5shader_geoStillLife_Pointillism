@@ -6,10 +6,9 @@ function preload() {
 }
 
 function setup() {
-//     let canvaswidth;
-//     if  (windowWidth<800) canvaswidth=800; else canvaswidth = windowWidth;
-    createCanvas(windowWidth, windowHeight, WEBGL);
-//     createCanvas(canvaswidth, windowHeight, WEBGL);
+    if (windowWidth < 600) {
+            createCanvas(windowWidth, windowWidth * 0.75, WEBGL);
+        } else createCanvas(windowWidth, windowHeight, WEBGL);
 
     noStroke();
 
