@@ -23,8 +23,8 @@ function setup() {
 
 function pass1(outputBuffer, sh) {
     outputBuffer.shader(sh);
-//     sh.setUniform("u_resolution", [width * 2, height * 2]);
-    sh.setUniform("u_resolution", [width, height]);
+    sh.setUniform("u_resolution", [width * 2, height * 2]);
+//     sh.setUniform("u_resolution", [width, height]);
     sh.setUniform('u_mouse', [mouseX, mouseY]);
     sh.setUniform('u_time', millis() / 1000.0);
     outputBuffer.rect(-width / 2, -height / 2, width, height);
